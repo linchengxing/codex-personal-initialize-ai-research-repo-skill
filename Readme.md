@@ -8,6 +8,8 @@ The skill is manual-only. Invoke it explicitly with:
 $initialize-ai-research-repo
 ```
 
+In current Codex CLI builds, setting `policy.allow_implicit_invocation: false` can remove a personal skill from the discoverable skill list entirely. This skill keeps itself discoverable and encodes manual-only behavior in its `SKILL.md` description instead.
+
 ## Install
 
 Recommended: ask Codex to install it conversationally:

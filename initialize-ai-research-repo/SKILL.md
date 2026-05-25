@@ -1,6 +1,6 @@
 ---
 name: initialize-ai-research-repo
-description: Initialize AI/ML research code repositories by creating or updating AGENT.md with operational context and experiment workflow rules. Use when Codex is asked to set up a research repo, write repo-specific agent instructions, define conda environment and GPU allocation for training/evaluation, or establish experiment records separate from running logs with readable experiment naming and per-experiment markdown analysis.
+description: Manual-only skill for initializing AI/ML research code repositories by creating or updating AGENT.md with operational context and experiment workflow rules. Use only when the user explicitly invokes $initialize-ai-research-repo or explicitly asks to use this exact skill; do not trigger for ordinary research-repo initialization requests that do not name the skill. Defines conda environment, GPU allocation for training/evaluation, and experiment records separate from running logs with readable experiment naming and per-experiment markdown analysis.
 ---
 
 # Initialize AI Research Repo
