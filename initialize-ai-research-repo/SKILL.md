@@ -24,7 +24,7 @@ Create or update `Agent.md` at the repository root so future agents know how to 
    - Do not invent GPU assignments. Do not leave placeholders such as `TODO`, `<env>`, or `ask user` for these required facts in the final file.
 
 3. Choose experiment workflow paths:
-   - Define a human-authored experiment record root separate from raw running logs. Default to `experiments/` if the repo has no clear convention.
+   - Define a human-authored experiment record root separate from raw running logs. Default to `codex_exp_log/` if the repo has no clear convention.
    - Define a raw running log root. Prefer an existing convention such as `runs/`, `outputs/`, `work_dirs/`, `logs/`, `wandb/`, or a framework-specific directory. Default to `runs/` only when no convention exists.
    - State that analysis, notes, figures, tables, and interpretations live under the experiment record directory, not the raw running log directory.
 
@@ -51,7 +51,7 @@ Include this experiment workflow, adapted to the repo:
 ```markdown
 ## Experiment Workflow
 
-- Experiment record root: `experiments/`
+- Experiment record root: `codex_exp_log/`
 - Raw running log root: `runs/`
 - Keep human-written records, hypotheses, code-change summaries, result interpretation, figures, and follow-up analysis under the experiment record root.
 - Keep raw stdout/stderr logs, checkpoints, TensorBoard/W&B artifacts, and generated run outputs under the raw running log root.
@@ -81,7 +81,7 @@ Define the per-experiment record layout:
 
 For each experiment, create:
 
-`experiments/<experiment-name>/exp.md`
+`codex_exp_log/<experiment-name>/exp.md`
 
 The experiment directory may also contain `analysis/`, `figures/`, `tables/`, and follow-up markdown notes.
 
