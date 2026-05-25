@@ -25,6 +25,22 @@ Path: initialize-ai-research-repo
 
 Restart Codex after installation so the new skill is loaded.
 
+## Update
+
+Recommended: ask Codex to update it conversationally:
+
+```text
+Update my installed initialize-ai-research-repo skill from linchengxing/codex-personal-initialize-ai-research-repo-skill.
+
+If it was installed as a copied folder, replace ${CODEX_HOME:-$HOME/.codex}/skills/initialize-ai-research-repo with the latest initialize-ai-research-repo folder from the GitHub repo.
+
+If it was installed as a symlink, find the linked repository and run git pull there.
+
+After updating, remind me to restart Codex so the refreshed skill is loaded.
+```
+
+The `$skill-installer` install script does not overwrite an existing skill directory, so updates should explicitly replace the installed copy or pull the linked repository.
+
 ### Manual Install
 
 Clone this repository:
