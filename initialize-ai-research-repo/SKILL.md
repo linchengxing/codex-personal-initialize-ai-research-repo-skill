@@ -1,18 +1,18 @@
 ---
 name: initialize-ai-research-repo
-description: Initialize AI/ML research code repositories by creating or updating Agent.md with operational context and experiment workflow rules. Use when Codex is asked to set up a research repo, write repo-specific agent instructions, define conda environment and GPU allocation for training/evaluation, or establish experiment records separate from running logs with readable experiment naming and per-experiment markdown analysis.
+description: Initialize AI/ML research code repositories by creating or updating AGENT.md with operational context and experiment workflow rules. Use when Codex is asked to set up a research repo, write repo-specific agent instructions, define conda environment and GPU allocation for training/evaluation, or establish experiment records separate from running logs with readable experiment naming and per-experiment markdown analysis.
 ---
 
 # Initialize AI Research Repo
 
 ## Overview
 
-Create or update `Agent.md` at the repository root so future agents know how to work in an AI research repo: which conda environment to use, which GPUs are reserved for training and evaluation, and how to record experiments without mixing human analysis with raw running logs.
+Create or update `AGENT.md` at the repository root so future agents know how to work in an AI research repo: which conda environment to use, which GPUs are reserved for training and evaluation, and how to record experiments without mixing human analysis with raw running logs.
 
 ## Workflow
 
 1. Inspect the repository before writing:
-   - Read existing `Agent.md`, `AGENTS.md`, `README*`, environment files, launch scripts, configs, and existing log/output directories.
+   - Read existing `AGENT.md`, legacy mixed-case variants, `AGENTS.md`, `README*`, environment files, launch scripts, configs, and existing log/output directories.
    - Preserve existing repo-specific instructions. Merge instead of replacing unless the user explicitly asks for a rewrite.
    - Prefer the repo's existing names for raw log roots, output roots, checkpoints, and analysis folders when they are clear.
 
@@ -20,7 +20,7 @@ Create or update `Agent.md` at the repository root so future agents know how to 
    - Require an exact conda environment name or path.
    - Require GPU IDs for training.
    - Require GPU IDs for evaluation/inference.
-   - If any required value is missing or ambiguous, ask the user before finalizing `Agent.md`. Use `request_user_input` when available; otherwise ask concise plain-text questions.
+   - If any required value is missing or ambiguous, ask the user before finalizing `AGENT.md`. Use `request_user_input` when available; otherwise ask concise plain-text questions.
    - Do not invent GPU assignments. Do not leave placeholders such as `TODO`, `<env>`, or `ask user` for these required facts in the final file.
 
 3. Choose experiment workflow paths:
@@ -28,12 +28,12 @@ Create or update `Agent.md` at the repository root so future agents know how to 
    - Define a raw running log root. Prefer an existing convention such as `runs/`, `outputs/`, `work_dirs/`, `logs/`, `wandb/`, or a framework-specific directory. Default to `runs/` only when no convention exists.
    - State that analysis, notes, figures, tables, and interpretations live under the experiment record directory, not the raw running log directory.
 
-4. Write or update `Agent.md`:
-   - Use the exact filename `Agent.md` unless the user asks for another file.
+4. Write or update `AGENT.md`:
+   - Use the exact filename `AGENT.md` unless the user asks for another file.
    - Keep commands and repo policies concrete enough that the next agent can execute them.
    - Include the sections below unless an existing structure makes a merged version clearer.
 
-## Required Agent.md Content
+## Required AGENT.md Content
 
 Include these operational facts:
 
@@ -99,7 +99,7 @@ The `exp.md` file must include:
 
 ## Interaction Rules
 
-- Ask for missing conda/GPU details before writing the final `Agent.md`.
+- Ask for missing conda/GPU details before writing the final `AGENT.md`.
 - If only experiment paths are missing, choose the defaults above and mention the choice.
 - If the user provides repo-specific path preferences, use them exactly.
 - If the repository already has raw run logs, do not move or rename them during initialization unless explicitly requested.
@@ -109,7 +109,7 @@ The `exp.md` file must include:
 
 Before finishing, verify:
 
-- `Agent.md` exists at the repo root.
+- `AGENT.md` exists at the repo root.
 - It contains the exact conda environment.
 - It contains explicit training GPU IDs and evaluation GPU IDs.
 - The experiment record root and raw running log root are distinct.

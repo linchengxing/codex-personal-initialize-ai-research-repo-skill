@@ -1,6 +1,6 @@
 # Initialize AI Research Repo Skill
 
-This repository contains a Codex skill for initializing AI research code repositories. It creates or updates `Agent.md` with repo-specific runtime details, GPU allocation rules, and a research experiment workflow.
+This repository contains a Codex skill for initializing AI research code repositories. It creates or updates `AGENT.md` with repo-specific runtime details, GPU allocation rules, and a research experiment workflow.
 
 The skill is manual-only. Invoke it explicitly with:
 
@@ -52,7 +52,7 @@ Restart Codex or reload skills if the new skill is not immediately visible.
 
 ## What It Produces
 
-The skill initializes an `Agent.md` at the target AI research repository root. It requires the user to provide:
+The skill initializes an `AGENT.md` at the target AI research repository root. It requires the user to provide:
 
 - the exact conda environment
 - GPU IDs for training
