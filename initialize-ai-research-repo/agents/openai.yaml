@@ -1,0 +1,7 @@
+interface:
+  display_name: "Initialize AI Research Repo"
+  short_description: "Generate Agent.md for research workflows"
+  default_prompt: "Use $initialize-ai-research-repo to initialize this AI research repository's Agent.md."
+
+policy:
+  allow_implicit_invocation: false
