@@ -10,6 +10,23 @@ $initialize-ai-research-repo
 
 ## Install
 
+Recommended: ask Codex to install it conversationally:
+
+```text
+Use $skill-installer to install the initialize-ai-research-repo skill from linchengxing/codex-personal-initialize-ai-research-repo-skill.
+```
+
+If Codex needs the exact GitHub path, provide:
+
+```text
+Repo: linchengxing/codex-personal-initialize-ai-research-repo-skill
+Path: initialize-ai-research-repo
+```
+
+Restart Codex after installation so the new skill is loaded.
+
+### Manual Install
+
 Clone this repository:
 
 ```bash
